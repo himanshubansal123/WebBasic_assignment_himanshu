@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Navigation Bar Example</title>
+</head>
+<body>
+<script>
+  
+  const navBar = document.createElement('div');
+  navBar.style.backgroundColor = '#333';
+  navBar.style.overflow = 'hidden';
+
+  const homeLink = document.createElement('a');
+  homeLink.href = '#';
+  homeLink.textContent = 'Home';
+  homeLink.target='_blank';
+  linkStyles(homeLink);
+
+  const aboutLink = document.createElement('a');
+  aboutLink.href = '#';
+  aboutLink.textContent = 'About';
+  aboutLink.target='_blank';
+  linkStyles(aboutLink);
+
+  const contactLink = document.createElement('a');
+  contactLink.href = '#';
+  contactLink.textContent = 'Contact';
+  contactLink.target='_blank';
+  linkStyles(contactLink);
+
+  function linkStyles(link) {
+    link.style.float = 'left';
+    link.style.display = 'block';
+    link.style.color = 'blue';
+    link.style.textAlign = 'center';
+    link.style.padding = '10px 12px';
+    link.style.textDecoration = 'none';
+    }
+
+  
+
+  
+  navBar.appendChild(homeLink);
+  navBar.appendChild(aboutLink);
+  navBar.appendChild(contactLink);
+
+  document.body.insertBefore(navBar, document.body.firstChild);
+</script>
+</body>
+</html>
